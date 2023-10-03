@@ -22,7 +22,7 @@ export default function RootLayout({
           id="join-ads-load"
           data-post-id="11098"
           type="text/javascript"
-          src="https://script.joinads.me/ads_11199.js"
+          src="https://script.joinads.me/ads_14086.js"
           async
         />
 
