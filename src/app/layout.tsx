@@ -23,11 +23,12 @@ export default function RootLayout({
           data-post-id="11098"
           type="text/javascript"
           src="https://script.joinads.me/ads_14086.js"
-          async
+          defer
         />
 
         <script
           id="ranking-google-tag-manager"
+          async
           dangerouslySetInnerHTML={{
             __html: `
           (function(w,d,s,l,i){w[l] = w[l] || [];w[l].push({'gtm.start':
