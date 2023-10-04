@@ -39,7 +39,7 @@ const BookItem = ({ book }: BookItemProps) => {
         </div>
 
         <div className="flex flex-col justify-center align-baseline content-end max-w sm:min-w-fit sm:w-auto mt-2">
-          <a href={url} className="rounded border border-transparent uppercase bg-orange-600 p-2 text-sm sm:text-base text-center font-medium text-white hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2">
+          <a href={url} className="cta-link rounded border border-transparent uppercase bg-orange-600 p-2 text-sm sm:text-base text-center font-medium text-white hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2">
             Ler Gratuitamente
           </a>
         </div>
