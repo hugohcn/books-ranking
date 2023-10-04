@@ -2,12 +2,36 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Footer from './components/footer'
+import books from '../data/books'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Recomendacoes Livros Cristaos',
-  description: 'Essa e uma recomendacao de livros cristaos',
+  title: 'Top 5 Livros Cristãos - Recomendações Especiais para Enriquecer sua Fé',
+  description: 'Explore nossa seleção dos melhores livros cristãos gratuitos, ideais para jovens e disponíveis em PDF. Nutra sua espiritualidade agora!',
+  keywords: ['livro cristão', 'livros cristãos gratuitos', 'livro cristão para jovens', 'livros cristãos em pdf gratis'],
+}
+
+const addProductJsonLd = () => {
+  return {
+    __html: ` {
+        "@context": "http://schema.org",
+        "@type": "ItemList",
+        "numberOfItems": ${books.length},
+        "itemListElement": [
+          ${books.map((book, index) => `
+            {
+              "@type": "ListItem",
+              "position": ${index + 1},
+              "name": ${book.name},
+              "image": ${book.thumbnail},
+              "url": "${book.url}"
+            }
+          `).join(',')}
+        ]
+      }
+    `
+  }
 }
 
 export default function RootLayout({
@@ -24,6 +48,12 @@ export default function RootLayout({
           type="text/javascript"
           src="https://script.joinads.me/ads_14086.js"
           defer
+        />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={addProductJsonLd()}
+          key="product-jsonld"
         />
 
         <script
@@ -47,11 +77,11 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
           </iframe>
         </noscript>
 
-        <div className="w-full flex flex-row justify-center">
+        <div className="w-full ml-auto mr-auto">
 
           <div className="join-ads" data-bloco="Fixed1" data-mobile="0" data-sizes="[[728, 90]]"></div>
 
-          <div className="flex flex-row justify-center max-w-6xl p-4 gap-3">
+          <div className="flex flex-row justify-center max-w-6xl ml-auto mr-auto p-4 gap-3">
             <div className="container max-w-3xl">
               {children}
             </div>
