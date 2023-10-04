@@ -23,8 +23,8 @@ const addProductJsonLd = () => {
             {
               "@type": "ListItem",
               "position": ${index + 1},
-              "name": ${book.name},
-              "image": ${book.thumbnail},
+              "name": "${book.name}",
+              "image": "${book.thumbnail}",
               "url": "${book.url}"
             }
           `).join(',')}
@@ -79,7 +79,9 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 
         <div className="w-full ml-auto mr-auto">
 
-          <div className="join-ads" data-bloco="Fixed1" data-mobile="0" data-sizes="[[728, 90]]"></div>
+          <div className="flex justify-center my-4">
+            <div className="join-ads" data-bloco="Fixed1" data-mobile="0" data-sizes="[[728, 90]]"></div>
+          </div>
 
           <div className="flex flex-row justify-center max-w-6xl ml-auto mr-auto p-4 gap-3">
             <div className="container max-w-3xl">
