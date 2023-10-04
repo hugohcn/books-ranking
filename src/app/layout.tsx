@@ -23,8 +23,8 @@ const addProductJsonLd = () => {
             {
               "@type": "ListItem",
               "position": ${index + 1},
-              "name": ${book.name},
-              "image": ${book.thumbnail},
+              "name": "${book.name}",
+              "image": "${book.thumbnail}",
               "url": "${book.url}"
             }
           `).join(',')}
