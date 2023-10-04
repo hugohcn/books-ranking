@@ -12,7 +12,7 @@ export default function Home() {
           <div key={index}>
             {index === 0 &&
               <div key={`ad-unit-top-container-${index}`} className="flex justify-center my-4">
-                <div key={`ad-unit-top-${index}`} className="join-ads" data-bloco="Fixed2" data-mobile="0" data-sizes="[[320, 50]]"></div>
+                <div key={`ad-unit-top-${index}`} className="join-ads" data-bloco="Fixed2" data-mobile="1" data-sizes="[[320, 50]]"></div>
               </div>
             }
 
