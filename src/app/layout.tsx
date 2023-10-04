@@ -94,6 +94,9 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
           </div>
         </div>
         <Footer />
+
+        <div className="join-ads" data-bloco="Interstitial" data-mobile="0"></div>
+        <div className="join-ads" data-bloco="Interstitial" data-mobile="1"></div>
       </body>
     </html >
   )
