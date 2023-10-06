@@ -37,12 +37,12 @@ const books = [
     is_pdf_link: false
   },
   {
-    name: 'ORANDO COMO JACÓ: Desvendando os segredos de uma oração eficaz',
+    name: 'Como Ler a Bíblia: Instruções Práticas',
     author: 'Charles Spurgeon',
-    thumbnail: 'https://m.media-amazon.com/images/I/71zCN+W1nPL._SY466_.jpg',
-    url: 'https://amzn.to/3F7sC4c',
+    thumbnail: 'https://m.media-amazon.com/images/I/91BTE3hfyRL._SY466_.jpg',
+    url: 'https://amzn.to/3F4oOkj',
     price: 0.00,
-    pages_count: 56,
+    pages_count: 26,
     is_pdf_link: false
   },
 ]
