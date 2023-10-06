@@ -4,7 +4,8 @@ interface Book {
   thumbnail: string,
   url: string,
   price: number,
-  pages_count: number
+  pages_count: number,
+  is_pdf_link: boolean
 }
 
 interface BookItemProps {
@@ -13,12 +14,12 @@ interface BookItemProps {
 
 
 const BookItem = ({ book }: BookItemProps) => {
-  const { name, author, thumbnail, url, price, pages_count }: any = book
+  const { name, author, thumbnail, url, price, pages_count, is_pdf_link }: any = book
 
   return (
     <div className="max-w bg-white rounded-md overflow-hidden shadow-md cursor-pointer flex flex-col sm:flex-row p-3 gap-3 sm:p-6 sm:gap-6 max-w-4xl">
       <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 w-full">
-        <div className="flex flex-row gap-3 sm:gap-6">
+        <div className="flex flex-row gap-3 sm:gap-6 flex-1">
           <div className=" flex flex-col sm:flex-row justify-center align-middle">
             <div className="flex-shrink-0 overflow-hidden rounded-md border border-gray-200 w-28">
               <img src={thumbnail} alt={name} className="h-full w-full object-cover object-center" />
@@ -39,7 +40,7 @@ const BookItem = ({ book }: BookItemProps) => {
         </div>
 
         <div className="flex flex-col justify-center align-baseline content-end max-w sm:min-w-fit sm:w-auto mt-2">
-          <a href={url} className="cta-link rounded border border-transparent uppercase bg-orange-600 p-2 text-sm sm:text-base text-center font-medium text-white hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2">
+          <a href={url} download={is_pdf_link} className="cta-link rounded border border-transparent uppercase bg-orange-600 p-2 text-sm sm:text-base text-center font-medium text-white hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2">
             Ler Gratuitamente
           </a>
         </div>
